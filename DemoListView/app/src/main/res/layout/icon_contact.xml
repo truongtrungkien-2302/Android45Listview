@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_margin="5dp">
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_centerVertical="true"
         android:textSize="25dp" />
 
     <TextView
         android:id="@+id/tvPhone"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="258741" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imgContact"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher" />
+</RelativeLayout>

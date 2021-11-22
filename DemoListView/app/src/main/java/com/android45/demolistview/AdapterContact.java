@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -37,11 +38,15 @@ public class AdapterContact extends BaseAdapter {
 
         TextView tvName = view.findViewById(R.id.tvName);
         TextView tvPhone = view.findViewById(R.id.tvPhone);
+        ImageView imgContact = view.findViewById(R.id.imgContact);
 
         ContactDemo contactDemo = contactDemoList.get(position);
 
         tvName.setText(contactDemo.getName());
         tvPhone.setText(String.valueOf(contactDemo.getPhoneNumber()));
+
+        if (contactDemo.isImg()) imgContact.setVisibility(View.VISIBLE);
+        else imgContact.setVisibility(View.GONE);
 
         return view;
     }
