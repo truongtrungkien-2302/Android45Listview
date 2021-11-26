@@ -42,13 +42,24 @@ public class MainActivity extends AppCompatActivity {
         AdapterContact adapterContact = new AdapterContact(contactDemoList);
 
         lvContact.setAdapter(adapterContact);
+        Intent intent = new Intent(getBaseContext(), AddContactActivity.class);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), AddContactActivity.class);
+                intent.putExtra("KeyName", "Android Studio");
                 startActivity(intent);
             }
         });
+
+        lvContact.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ContactDemo contactDemo = contactDemoList.get(i);
+                intent.putExtra("phoneNumber", contactDemo.getPhoneNumber());
+                startActivity(intent);
+            }
+        });
+
     }
 }

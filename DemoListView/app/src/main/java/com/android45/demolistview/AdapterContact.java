@@ -37,13 +37,13 @@ public class AdapterContact extends BaseAdapter {
         View view = layoutInflater.inflate(R.layout.icon_contact, parent, false);
 
         TextView tvName = view.findViewById(R.id.tvName);
-        TextView tvPhone = view.findViewById(R.id.tvPhone);
+        TextView tvPhoneNumber = view.findViewById(R.id.tvPhoneNumber);
         ImageView imgContact = view.findViewById(R.id.imgContact);
 
         ContactDemo contactDemo = contactDemoList.get(position);
 
         tvName.setText(contactDemo.getName());
-        tvPhone.setText(String.valueOf(contactDemo.getPhoneNumber()));
+        tvPhoneNumber.setText(String.valueOf(contactDemo.getPhoneNumber()));
 
         if (contactDemo.isImg()) imgContact.setVisibility(View.VISIBLE);
         else imgContact.setVisibility(View.GONE);
