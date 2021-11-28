@@ -5,9 +5,9 @@
     <solid android:color="#000000"></solid>
 
     <!--    Đặt thuộc tính màu và độ rộng của đường viền-->
-<!--    <stroke-->
-<!--        android:width="3dp"-->
-<!--        android:color="#FFFFFF"></stroke>-->
+    <stroke
+        android:width="3dp"
+        android:color="#FFFFFF"></stroke>
 
 <!--    &lt;!&ndash;    Các thuộc tính căn chỉnh&ndash;&gt;-->
 <!--    <padding-->

@@ -46,28 +46,10 @@ public class MainActivity extends AppCompatActivity {
         lvContact.setAdapter(adapterContact);
         Intent intent = new Intent(getBaseContext(), AddContactActivity.class);
 
-//        btnAdd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                intent.putExtra("KeyName", "Android Studio");
-//                startActivity(intent);
-//            }
-//        });
-//
-//        lvContact.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                ContactDemo contactDemo = contactDemoList.get(i);
-//                intent.putExtra("phoneNumber", contactDemo.getPhoneNumber());
-//                startActivity(intent);
-//            }
-//        });
-
-        imgBtn.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.putExtra("action", "add");
-                intent.putExtra("strLabel", "Name");
+                intent.putExtra("KeyName", "Android Studio");
                 startActivity(intent);
             }
         });
@@ -75,11 +57,29 @@ public class MainActivity extends AppCompatActivity {
         lvContact.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                intent.putExtra("action", "view");
-                intent.putExtra("phoneNumber", contactDemoList.get(i).getPhoneNumber());
+                ContactDemo contactDemo = contactDemoList.get(i);
+                intent.putExtra("phoneNumber", contactDemo.getPhoneNumber());
                 startActivity(intent);
             }
         });
+
+//        imgBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                intent.putExtra("action", "add");
+//                intent.putExtra("strLabel", "Name");
+//                startActivity(intent);
+//            }
+//        });
+//
+//        lvContact.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                intent.putExtra("action", "view");
+//                intent.putExtra("phoneNumber", contactDemoList.get(i).getPhoneNumber());
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }
