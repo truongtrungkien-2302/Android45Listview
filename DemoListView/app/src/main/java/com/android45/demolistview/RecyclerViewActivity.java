@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,5 +35,17 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         rvList.setLayoutManager(layoutManager);
         rvList.setAdapter(recyclerViewAdapter);
+
+        recyclerViewAdapter.setiOnClickContactRv(new IOnClickContactRv() {
+            @Override
+            public void onClickName(String name) {
+                Toast.makeText(getBaseContext(), name, Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onClickPhone(ContactDemo contactDemo) {
+                Toast.makeText(getBaseContext(), contactDemo.getPhoneNumber() + "", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }

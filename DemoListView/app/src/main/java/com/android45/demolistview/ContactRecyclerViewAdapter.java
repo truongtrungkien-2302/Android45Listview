@@ -12,6 +12,11 @@ import java.util.List;
 
 public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecyclerViewAdapter.Viewhoder> {
     List<ContactDemo> contactDemoList;
+    IOnClickContactRv iOnClickContactRv;
+
+    public void setiOnClickContactRv(IOnClickContactRv iOnClickContactRv) {
+        this.iOnClickContactRv = iOnClickContactRv;
+    }
 
     public ContactRecyclerViewAdapter(List<ContactDemo> contactDemoList) {
         this.contactDemoList = contactDemoList;
@@ -33,6 +38,20 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecy
 
         holder.tvName.setText(contactDemo.getName());
         holder.tvPhone.setText(String.valueOf(contactDemo.getPhoneNumber()));
+
+        holder.tvName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iOnClickContactRv.onClickName(contactDemo.getName());
+            }
+        });
+
+        holder.tvPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iOnClickContactRv.onClickPhone(contactDemo);
+            }
+        });
     }
 
     @Override
