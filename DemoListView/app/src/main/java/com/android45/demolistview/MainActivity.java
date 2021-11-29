@@ -28,18 +28,11 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
 
         contactDemoList = new ArrayList<>();
-
-        contact01 = new ContactDemo("Android", 99999, true);
-        contact02 = new ContactDemo("IOS", 88888, false);
-        contact03 = new ContactDemo(".Net", 77777, true);
-        contact04 = new ContactDemo("PHP", 66666, false);
-        contact05 = new ContactDemo("Flutter", 55555, true);
-
-        contactDemoList.add(contact01);
-        contactDemoList.add(contact02);
-        contactDemoList.add(contact03);
-        contactDemoList.add(contact04);
-        contactDemoList.add(contact05);
+        contactDemoList.add(new ContactDemo("Android", 99999, true));
+        contactDemoList.add(new ContactDemo("IOS", 88888, false));
+        contactDemoList.add(new ContactDemo(".Net", 77777, true));
+        contactDemoList.add(new ContactDemo("PHP", 66666, false));
+        contactDemoList.add(new ContactDemo("Flutter", 55555, true));
 
         AdapterContact adapterContact = new AdapterContact(contactDemoList);
 
