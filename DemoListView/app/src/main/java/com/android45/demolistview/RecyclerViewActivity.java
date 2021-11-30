@@ -29,7 +29,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         contactDemoList.add(new ContactDemo("PHP", 66666, false));
         contactDemoList.add(new ContactDemo("Flutter", 55555, true));
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getBaseContext(), 1, RecyclerView.HORIZONTAL, false);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getBaseContext(), 1, RecyclerView.VERTICAL, false);
 
         recyclerViewAdapter = new ContactRecyclerViewAdapter(contactDemoList);
 
