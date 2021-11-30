@@ -13,7 +13,6 @@ import java.util.List;
 public class RecyclerViewActivity extends AppCompatActivity {
     RecyclerView rvList;
     List<ContactDemo> contactDemoList;
-    ContactDemo contact01, contact02, contact03, contact04, contact05;
     ContactRecyclerViewAdapter recyclerViewAdapter;
 
     @Override
@@ -35,7 +34,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         rvList.setLayoutManager(layoutManager);
         rvList.setAdapter(recyclerViewAdapter);
-
+ 
         recyclerViewAdapter.setiOnClickContactRv(new IOnClickContactRv() {
             @Override
             public void onClickName(String name) {

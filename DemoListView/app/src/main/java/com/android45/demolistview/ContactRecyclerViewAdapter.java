@@ -22,6 +22,7 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecy
         this.contactDemoList = contactDemoList;
     }
 
+
     @NonNull
     @Override
     public ContactRecyclerViewAdapter.Viewhoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
